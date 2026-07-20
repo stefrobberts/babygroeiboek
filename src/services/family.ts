@@ -1,6 +1,7 @@
 import "server-only"
 
 import { createClient } from "@/lib/supabase/server"
+import { getAuthenticatedProfile } from "@/services/auth"
 import type { Tables } from "@/types/database.types"
 
 export interface FamilyContext {
@@ -16,25 +17,14 @@ export interface FamilyContext {
  * whether that means "show onboarding" or "show empty state".
  */
 export async function getFamilyContext(): Promise<FamilyContext | null> {
+  const auth = await getAuthenticatedProfile()
+
+  if (!auth?.profile) {
+    return null
+  }
+
+  const { user, profile } = auth
   const supabase = await createClient()
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
-  if (!user) {
-    return null
-  }
-
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("*")
-    .eq("id", user.id)
-    .single()
-
-  if (!profile) {
-    return null
-  }
 
   const { data: membership } = await supabase
     .from("family_members")

@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 
-import { createClient } from "@/lib/supabase/server"
+import { getAuthenticatedProfile } from "@/services/auth"
 import { getDashboardData } from "@/features/dashboard/lib/get-dashboard-data"
 import { WelcomeHeader } from "@/features/dashboard/components/welcome-header"
 import { QuickStats } from "@/features/dashboard/components/quick-stats"
@@ -15,20 +15,9 @@ export const metadata: Metadata = {
 }
 
 export default async function DashboardPage() {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
-  const { data: profile } = user
-    ? await supabase
-        .from("profiles")
-        .select("full_name")
-        .eq("id", user.id)
-        .single()
-    : { data: null }
-
-  const parentName = profile?.full_name ?? user?.email?.split("@")[0] ?? "daar"
+  const auth = await getAuthenticatedProfile()
+  const parentName =
+    auth?.profile?.full_name ?? auth?.user.email?.split("@")[0] ?? "daar"
   const data = await getDashboardData()
 
   return (

@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation"
 
-import { createClient } from "@/lib/supabase/server"
+import { getAuthenticatedProfile } from "@/services/auth"
 import { AppShell } from "@/components/layout/app-shell"
 
 export default async function AppLayout({
@@ -8,21 +8,13 @@ export default async function AppLayout({
 }: {
   children: React.ReactNode
 }) {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
+  const auth = await getAuthenticatedProfile()
 
-  if (!user) {
+  if (!auth) {
     redirect("/login")
   }
 
-  const { data: profile } = await supabase
-    .from("profiles")
-    .select("full_name, email, avatar_url")
-    .eq("id", user.id)
-    .single()
-
+  const { user, profile } = auth
   const name = profile?.full_name ?? user.email?.split("@")[0] ?? "Ouder"
   const email = profile?.email ?? user.email ?? ""
 
