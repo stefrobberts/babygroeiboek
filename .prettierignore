@@ -1,0 +1,7 @@
+.next
+node_modules
+coverage
+build
+public
+next-env.d.ts
+*.tsbuildinfo
