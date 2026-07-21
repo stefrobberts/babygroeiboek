@@ -12,7 +12,7 @@ export default function Icon() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background: "#6D5B4B",
+        background: "#F2662E",
         borderRadius: "50%",
       }}
     >
@@ -21,7 +21,7 @@ export default function Icon() {
         height="34"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#FBF9F6"
+        stroke="#FFFFFF"
         strokeWidth="1.6"
       >
         <path

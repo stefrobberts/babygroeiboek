@@ -16,7 +16,7 @@ export default function OpengraphImage() {
         alignItems: "center",
         justifyContent: "center",
         gap: 28,
-        background: "#F8F5F1",
+        background: "#FDF3E7",
         padding: 80,
       }}
     >
@@ -26,7 +26,7 @@ export default function OpengraphImage() {
           width: 108,
           height: 108,
           borderRadius: "50%",
-          background: "#6D5B4B",
+          background: "#F2662E",
           alignItems: "center",
           justifyContent: "center",
         }}
@@ -36,7 +36,7 @@ export default function OpengraphImage() {
           height="58"
           viewBox="0 0 24 24"
           fill="none"
-          stroke="#FBF9F6"
+          stroke="#FFFFFF"
           strokeWidth="1.4"
         >
           <path

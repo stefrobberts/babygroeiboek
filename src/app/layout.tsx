@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next"
-import { Cormorant_Garamond, Inter } from "next/font/google"
+import { Inter, Poppins } from "next/font/google"
 
 import { AppProviders } from "@/providers/app-providers"
 import { siteConfig } from "@/config/site"
@@ -12,10 +12,10 @@ const inter = Inter({
   display: "swap",
 })
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["500", "600", "700", "800"],
   display: "swap",
 })
 
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#f8f5f1",
+  themeColor: "#fdf3e7",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -63,7 +63,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="nl" suppressHydrationWarning>
-      <body className={`${inter.variable} ${cormorant.variable} antialiased`}>
+      <body className={`${inter.variable} ${poppins.variable} antialiased`}>
         <AppProviders>{children}</AppProviders>
       </body>
     </html>

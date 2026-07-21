@@ -12,7 +12,7 @@ interface StatCardProps extends React.ComponentProps<"div"> {
 
 const toneClasses: Record<NonNullable<StatCardProps["tone"]>, string> = {
   primary: "bg-primary/10 text-primary",
-  secondary: "bg-secondary/15 text-secondary-foreground",
+  secondary: "bg-secondary/25 text-secondary-foreground",
   success: "bg-success/15 text-success",
   warning: "bg-warning/20 text-warning-foreground",
 }
@@ -36,7 +36,7 @@ export function StatCard({
     >
       <span
         className={cn(
-          "flex size-11 shrink-0 items-center justify-center rounded-full",
+          "flex size-12 shrink-0 items-center justify-center rounded-full",
           toneClasses[tone]
         )}
       >
@@ -44,7 +44,7 @@ export function StatCard({
       </span>
       <div className="min-w-0">
         <p className="text-muted-foreground truncate text-sm">{label}</p>
-        <p className="font-heading text-foreground truncate text-2xl font-medium">
+        <p className="font-heading text-foreground truncate text-2xl font-semibold">
           {value}
         </p>
         {meta ? (

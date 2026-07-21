@@ -25,11 +25,11 @@ export function EmptyState({
       )}
       {...props}
     >
-      <span className="bg-accent text-accent-foreground flex size-14 items-center justify-center rounded-full">
-        <Icon className="size-6" aria-hidden="true" strokeWidth={1.5} />
+      <span className="bg-accent text-accent-foreground flex size-16 items-center justify-center rounded-full">
+        <Icon className="size-7" aria-hidden="true" strokeWidth={1.5} />
       </span>
       <div className="space-y-1.5">
-        <h3 className="font-heading text-foreground text-xl font-medium">
+        <h3 className="font-heading text-foreground text-xl font-semibold">
           {title}
         </h3>
         {description ? (

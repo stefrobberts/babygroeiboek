@@ -16,61 +16,55 @@ Iedere pagina moet rust uitstralen.
 Iedere interactie moet intuïtief voelen.
 Iedere functionaliteit moet eenvoudig te gebruiken zijn.
 
-De primaire doelgroep zijn jonge ouders, waarbij de moeder de belangrijkste gebruiker is. De applicatie moet daarom warm, premium, vriendelijk en minimalistisch aanvoelen.
+De primaire doelgroep zijn jonge ouders, waarbij de moeder de belangrijkste gebruiker is. De applicatie moet daarom warm, speels, vriendelijk en toegankelijk aanvoelen.
 
 ---
 
 # Design Filosofie
 
-Gebruik de designfilosofie van Donsje Amsterdam.
+Speelse, warme consumer-app stijl (referentie: Babylizer).
 
 Belangrijke eigenschappen:
 
-- Premium uitstraling
-- Veel witruimte
-- Rustige kleuren
-- Mooie fotografie
-- Serif headings
-- Minimalistische interface
+- Vrolijke, energieke uitstraling
+- Veel witruimte, maar niet steriel
+- Warme, felle accentkleur (oranje)
+- Ronde, vriendelijke typografie
+- Emoji als iconen voor activiteiten en status
 - Grote touch targets
-- Organische vormen
+- Organische vormen, zachte badges/pills
 - Subtiele animaties
-- Luxe uitstraling
-- Geen drukke dashboards
-- Geen felle kleuren
-- Alles moet elegant ogen
+- Geen drukke dashboards qua layout, wel kleurrijke details
+- Alles moet vriendelijk en toegankelijk ogen, niet kil-luxe
 
 Inspiratie:
 
-- Donsje Amsterdam
-- Apple
-- Notion
+- Babylizer
 - Headspace
-- Calm
+- Duolingo
+- Calm (structuur/rust), maar warmer en kleurrijker in de uitvoering
 
 ---
 
 # Brand Keywords
 
-Premium
-
 Warm
+
+Speels
+
+Vriendelijk
 
 Motherhood
 
-Luxury
-
-Minimal
+Energiek
 
 Organic
 
-Elegant
+Toegankelijk
 
-Calm
+Vrolijk
 
-Soft
-
-Timeless
+Zacht
 
 Family
 
@@ -80,35 +74,35 @@ Family
 
 ## Achtergrond
 
-#F8F5F1
+#FDF3E7
 
 ## Cards
 
 #FFFFFF
 
-## Primary
+## Primary (oranje accent)
 
-#6D5B4B
+#F2662E
 
-## Secondary
+## Secondary (zacht oranje/goud)
 
-#A28C74
+#FDBA74
 
 ## Borders
 
-#EAE4DD
+#F0E4D8
 
 ## Success
 
-#98B58A
+#22C55E
 
 ## Warning
 
-#D5A766
+#F59E0B
 
 ## Error
 
-#C97A73
+#EF4444
 
 ---
 
@@ -116,7 +110,7 @@ Family
 
 ## Headings
 
-Cormorant Garamond
+Poppins (bold, geometrisch, vriendelijk)
 
 ## Body
 
@@ -124,17 +118,15 @@ Inter
 
 ## Buttons
 
-Inter SemiBold
+Poppins SemiBold
 
 ---
 
 # Iconen
 
-Gebruik uitsluitend minimalistische outline iconen.
+Gebruik uitsluitend Lucide Icons (outline), overal in de app — dus ook voor activiteiten, status en tijdlijn-items.
 
-Voorkeur:
-
-Lucide Icons
+Geen emoji als icoon.
 
 Geen gevulde iconen.
 
